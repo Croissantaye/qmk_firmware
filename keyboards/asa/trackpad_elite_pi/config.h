@@ -31,11 +31,20 @@
 // #define CRC8_OPTIMIZE_SPEED
 
 /* Cirque trackpad over SPI. */
+// try elite c pin names
 #define SPI_DRIVER SPID0
-#define SPI_SCK_PIN GP22
-#define SPI_MOSI_PIN GP23
-#define SPI_MISO_PIN GP20
-#define POINTING_DEVICE_CS_PIN GP21
+#define SPI_SCK_PIN B1
+#define SPI_MOSI_PIN B3
+#define SPI_MISO_PIN B2
+#define POINTING_DEVICE_CS_PIN B6
+
+/* Cirque trackpad over SPI. */
+// try elite pi pin names
+// #define SPI_DRIVER SPID0
+// #define SPI_SCK_PIN D22
+// #define SPI_MOSI_PIN D20
+// #define SPI_MISO_PIN D23
+// #define POINTING_DEVICE_CS_PIN D21
 
 /* Cirque settings*/
 #undef CIRQUE_PINNACLE_DIAMETER_MM
@@ -49,5 +58,5 @@
 
 /* Reset. */
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP1
+// #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED B0
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
