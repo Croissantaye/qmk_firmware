@@ -10,6 +10,50 @@
 #define RAISE MO(_RAISE)
 // #define LOWER MO(_LOWER)
 
+enum custom_keycodes {
+    // virtual desktop left
+    VDL = SAFE_RANGE,
+    // virtual desktop right
+    VDR
+};
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+    case VDL:
+        if (record->event.pressed)
+        {
+            // when keycode QMKBEST is pressed
+            register_code(KC_LGUI);
+            register_code(KC_LCTL);
+            register_code(KC_LEFT);
+        }
+        else
+        {
+            // when keycode QMKBEST is released
+            unregister_code(KC_LGUI);
+            unregister_code(KC_LCTL);
+            unregister_code(KC_LEFT);
+        }
+        break;
+    case VDR:
+        if (record->event.pressed)
+        {
+            register_code(KC_LGUI);
+            register_code(KC_LCTL);
+            register_code(KC_RGHT);
+        }
+        else
+        {
+            // do something when released
+            unregister_code(KC_LGUI);
+            unregister_code(KC_LCTL);
+            unregister_code(KC_RGHT);
+
+        }
+    }
+    return true;
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
      *
@@ -100,7 +144,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          KC_F6,    KC_F7,   KC_F8,   KC_F9,  KC_F10,    KC_F11,
                          _______ , KC_WH_U, KC_WH_D, KC_WH_L, KC_WH_R, _______,
                          _______ , KC_BTN1, KC_BTN2, KC_BTN3, KC_BTN4, KC_BTN5,
-                         _______ , DM_REC1, DM_PLY1, DM_REC2, DM_PLY2, KC_GRV,
+                         /*_______ , DM_REC1, DM_PLY1, DM_REC2, DM_PLY2, KC_GRV,*/
+                         _______ ,     VDL,     VDR, _______, _______, _______,
                          _______ ,             _______,_______,
         _______, _______, _______
     )
