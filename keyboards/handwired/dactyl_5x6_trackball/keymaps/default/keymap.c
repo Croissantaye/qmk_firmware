@@ -123,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *          ┼───┼───┼───┼───┼───┼───┤
      *          │   │LMB│RMB│MW │BCK│FWD│
      *          ┼───┼───┼───┼───┼───┼───┤
-     *          │   │MRS│MRP│MRS│MRP│ ` │
+     *          │   │VDL│VDR│MRS│MRP│ ` │
      *          ┼───┼───┼───┼───┼───┴───┘
      *          │   │   │   │   │
      *  ┌───┬───┼───┤   └───┴───┘
