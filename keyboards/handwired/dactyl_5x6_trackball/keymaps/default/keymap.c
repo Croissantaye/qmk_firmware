@@ -123,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *          ┼───┼───┼───┼───┼───┼───┤
      *          │   │LMB│RMB│MW │BCK│FWD│
      *          ┼───┼───┼───┼───┼───┼───┤
-     *          │   │VDL│VDR│MRS│MRP│ ` │
+     *          │   │VDL│VDR│   │   │ ` │
      *          ┼───┼───┼───┼───┼───┴───┘
      *          │   │   │   │   │
      *  ┌───┬───┼───┤   └───┴───┘
@@ -145,7 +145,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          _______ , KC_WH_U, KC_WH_D, KC_WH_L, KC_WH_R, _______,
                          _______ , KC_BTN1, KC_BTN2, KC_BTN3, KC_BTN4, KC_BTN5,
                          /*_______ , DM_REC1, DM_PLY1, DM_REC2, DM_PLY2, KC_GRV,*/
-                         _______ ,     VDL,     VDR, _______, _______, _______,
+                         _______ ,     VDL,     VDR, _______, _______,  KC_GRV,
                          _______ ,             _______,_______,
         _______, _______, _______
     )
