@@ -11,7 +11,7 @@
         "bootmagic": true
     },
     "matrix_pins": {
-        "rows": ["F7", "B1", "B3", "B2"],
+        "rows": ["F6", "F7", "B1", "B3"],
         "cols": ["D7", "C6", "D4", "D0", "D1"]
     },
     "diode_direction": "COL2ROW",
